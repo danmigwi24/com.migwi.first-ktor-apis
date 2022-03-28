@@ -28,15 +28,21 @@ dependencies {
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 
+    //
+    implementation ("io.ktor:ktor-server-content-negotiation-jvm:1.6.8")
+
+    //
+    implementation ("io.ktor:ktor-jackson:1.6.8")
 
     // Exposed ORM library
     implementation("org.jetbrains.exposed:exposed-core:0.37.3")
     implementation("org.jetbrains.exposed:exposed-dao:0.37.3")
     implementation("org.jetbrains.exposed:exposed-jdbc:0.37.3")
-//
+    implementation("org.jetbrains.exposed:exposed-java-time:0.37.3")
+    //
     implementation("com.zaxxer:HikariCP:5.0.1") // JDBC Connection Pool
     implementation("org.postgresql:postgresql:42.3.3") // JDBC Connector for PostgreSQL
-//
+    //
     implementation("io.ktor:ktor-auth:1.6.8")
     implementation("io.ktor:ktor-auth-jwt:1.6.8")
 
