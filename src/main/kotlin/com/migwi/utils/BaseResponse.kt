@@ -4,7 +4,6 @@ import io.ktor.http.*
 
 sealed class BaseResponse<T>(
     val statusCode:HttpStatusCode=HttpStatusCode.OK
-
 ){
     data class SuccessResponse<T>(
         val data:T?=null,

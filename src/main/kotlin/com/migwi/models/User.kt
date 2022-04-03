@@ -1,6 +1,6 @@
 package com.migwi.models
 
-data class User(
+data class  User(
     val id: Int,
     val fullName: String,
     val email: String,

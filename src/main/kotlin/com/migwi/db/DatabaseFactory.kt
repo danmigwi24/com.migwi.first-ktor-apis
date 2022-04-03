@@ -20,7 +20,7 @@ object DatabaseFactory {
     private fun hikari(): HikariDataSource {
         val config = HikariConfig()
         config.driverClassName = "org.postgresql.Driver"
-        //config.jdbcUrl = "jdbc:postgresql:MyKtorAppDb?user=dkimani"
+        //config.jdbcUrl = "jdbc:postgresql:MyKtorAppDb?user=postgres"
         config.jdbcUrl = "jdbc:postgresql:myktorappdb"
         config.username = "postgres"
         config.password = ""

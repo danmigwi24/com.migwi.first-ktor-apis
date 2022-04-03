@@ -1,4 +1,4 @@
-package com.migwi.service
+package com.migwi.models
 
 data class CreateUserParams(
     val fullName: String,

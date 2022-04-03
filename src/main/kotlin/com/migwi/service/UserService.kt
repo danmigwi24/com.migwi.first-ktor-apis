@@ -1,5 +1,6 @@
 package com.migwi.service
 
+import com.migwi.models.CreateUserParams
 import com.migwi.models.User
 
 interface UserService {

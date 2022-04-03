@@ -2,9 +2,9 @@ package com.migwi.service
 
 import com.migwi.db.DatabaseFactory
 import com.migwi.db.UserTable
+import com.migwi.models.CreateUserParams
 import com.migwi.models.User
 import org.jetbrains.exposed.sql.ResultRow
-import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.statements.InsertStatement
@@ -14,7 +14,7 @@ class UserServiceImpl : UserService {
         var statement: InsertStatement<Number>? = null
         DatabaseFactory.dbQuery {
             statement = UserTable.insert {
-                it[fullName] = params.email
+                it[fullName] = params.fullName
                 it[email] = params.email
                 it[password] = params.password //@Encrypt password
                 it[avatar] = params.avatar
@@ -41,4 +41,5 @@ class UserServiceImpl : UserService {
             createdAt = row[UserTable.createdAt].toString()
         )
     }
+
 }
